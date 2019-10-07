@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   console.log("about what?");
-  // res.sendFile("index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.get("/*", (req, res) => {
