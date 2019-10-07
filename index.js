@@ -9,7 +9,7 @@ app.use(cors());
 app.use("/math", mathMiddleware);
 
 app.get("/", (req, res) => {
-  res.send("Hello world!");
+  res.send("JRJ Math Lab. Go to url + /about for documentation");
 });
 
 app.get("/about", (req, res) => {
