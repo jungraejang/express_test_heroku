@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
+app.get("/about", (req, res) => {
+  res.sendFile("./index.html");
+});
+
 app.get("/*", (req, res) => {
   res.send("404 page not found. Check your URL or try another query parameter");
 });
