@@ -1,0 +1,21 @@
+const express = require("express");
+const app = express();
+const mathMiddleware = require("./routes/mathMiddleware.js");
+const cors = require("cors");
+const port = 8000;
+
+app.use(cors());
+
+app.use("/math", mathMiddleware);
+
+app.get("/", (req, res) => {
+  res.send("Hello world!");
+});
+
+app.get("/*", (req, res) => {
+  res.send("404 page not found. Check your URL or try another query parameter");
+});
+
+app.listen(port, () => {
+  console.log("listening to port 8000");
+});
