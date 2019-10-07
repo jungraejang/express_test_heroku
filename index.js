@@ -13,7 +13,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile("./index.html");
+  console.log("about what?");
+  // res.sendFile("index.html");
 });
 
 app.get("/*", (req, res) => {
@@ -21,5 +22,5 @@ app.get("/*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("listening to port 8000");
+  console.log("listening to port 8080");
 });
