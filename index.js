@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mathMiddleware = require("./routes/mathMiddleware.js");
 const cors = require("cors");
-const port = 8000;
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 
